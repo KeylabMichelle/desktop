@@ -32,17 +32,17 @@ export default function BottomBar() {
 
             <div className="flex items-center gap-3 flex-1 justify-center">
 
-                <img src="icons/laptop.png" alt="Windows logo" width={30} height={30} />
+                <img src="icons/laptop.png" alt="Laptop logo" width={40} height={40} className="cursor-pointer hover:bg-secondary rounded-md p-1"/>
                 <input
                     type="text"
                     placeholder="Search"
-                    className="bg-green-200 text-primary-dark px-2 py-1 focus:outline-none rounded-md text-sm w-40 "
+                    className="bg-secondary text-white  px-2 py-1 focus:outline-none rounded-md text-sm w-60 cursor-pointer"
                 />
 
             </div>
 
-            <div className="flex-1 flex items-center justify-end gap-4">
-                <span className="text-sm">
+            <div className="flex-1 flex  items-center justify-end gap-4 rounded-md p-2">
+                <span className="text-sm hover:bg-secondary rounded-md px-3 py-3 cursor-pointer flex-col">
                     {time}
                 </span>
             </div>
