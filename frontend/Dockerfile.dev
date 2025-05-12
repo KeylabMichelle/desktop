@@ -1,0 +1,18 @@
+# Install dependencies 
+FROM node:23-alpine
+
+WORKDIR /app
+
+# Copy package.json and package-lock.json to /app
+COPY package.*json ./ 
+
+RUN npm install
+
+# Expose port 3000: by default, React runs on port 3000
+EXPOSE 3000
+
+# Start the application as a development server
+CMD ["npm", "run", "dev"]
+
+
+

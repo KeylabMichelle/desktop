@@ -1,0 +1,35 @@
+# Build
+FROM node:23-alpine AS builder
+
+WORKDIR /app
+
+# Copy package.json and package-lock.json to /app
+COPY package.*json . 
+
+RUN npm install
+# Copy all files from the current directory to /app
+COPY . . 
+
+RUN npm run build
+
+
+# Production server
+
+FROM node:23-alpine-slim
+WORKDIR /app
+
+
+# Copy only the necessary files from the builder stage
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/node_modules ./node_modules
+
+ENV NODE_ENV=production
+EXPOSE 4000
+
+# Start the application as production server 
+CMD ["npm", "run", "start"]
+
+
+
