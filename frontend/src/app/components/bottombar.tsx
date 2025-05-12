@@ -32,11 +32,11 @@ export default function BottomBar() {
 
             <div className="flex items-center gap-3 flex-1 justify-center">
 
-                <img src="windows.png" alt="Windows logo" width={24} height={24} />
+                <img src="icons/laptop.png" alt="Windows logo" width={30} height={30} />
                 <input
                     type="text"
                     placeholder="Search"
-                    className="bg-amber-50 text-primary-dark px-2 py-1 focus:outline-none rounded-md text-sm w-40 "
+                    className="bg-green-200 text-primary-dark px-2 py-1 focus:outline-none rounded-md text-sm w-40 "
                 />
 
             </div>
