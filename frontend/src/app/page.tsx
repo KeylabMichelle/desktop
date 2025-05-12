@@ -1,8 +1,13 @@
+import Image from 'next/image';
+
 export default function Home() {
   return (
-    <main className = "min-h-screen text-white flex items-center justify-center bg-background">
+    
 
-      <h1 className = "text-4xl font-bold"> Web app </h1>
+    <main className = "min-h-screen text-white flex items-center justify-center">
+      <div>
+        <Image src="/green-robot.png" alt="Background Image" width={800} height={800} />
+      </div>
 
     </main>
 
