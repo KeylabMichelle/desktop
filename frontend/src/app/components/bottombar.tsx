@@ -25,7 +25,7 @@ export default function BottomBar() {
 
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 text-white bg-primary-dark h-12 flex items-center justify-between px-4 shadow-lg z-50">
+        <div className="fixed bottom-0 left-0 right-0 text-complementary bg-primary-dark h-15 flex items-center justify-between px-4 border-t-5 border-t-teal-900 shadow-lg z-50">
             <div className="flex-1">
 
             </div>
